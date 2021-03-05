@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@500;600&display=swap');
+/* font-family: 'Courgette', cursive;
+font-family: 'Montserrat', sans-serif; (font-weight: 500) */
+ */
+
+
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body{
+    margin:0;
+    min-height: 100vh;
+    background-size: 3.5%;
+    background-color: #efefee;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23dddbd5' fill-opacity='0.25' fill-rule='evenodd'/%3E%3C/svg%3E");
+    color: rgb(71, 71, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+
+}
+
+.quote-container{
+    width: auto;
+    max-width: 700px;
+    margin: 5vw;
+    padding: 5rem 3rem 3rem;
+    background-color: #efefee;
+    box-shadow: 6px 6px 16px #d1cdce83, -6px -6px 16px rgba(255,255,255,0.7);
+    border: rgba(41, 18, 18, 0.5);
+    border-radius: 20px;
+
+}
+
+.fa-quote-left{
+    font-size: 1.3rem;
+    vertical-align: top;
+    color: rgb(88, 88, 88);
+}
+
+.quote{
+    font-family: 'Courgette', cursive;
+    font-size: 2.5rem;
+}
+
+.quote .long-quote{
+    font-size: 2rem;
+}
+
+.quote-author{
+    margin: 1rem 0 2rem ;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+button{
+    cursor: pointer;
+    background-color: rgb(105, 105, 105);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 7.5px;
+    color:  #efefee;
+    box-shadow: 3px 3px 8px #8f8b8c9c, 
+                -3px -3px 8px rgba(255,255,255,0.7);
+    font-size: 1.3rem;
+    border: rgba(41, 18, 18, 0.5);
+    transition: box-shadow 0.2s, filter 0.2s;
+    outline: none;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+button:hover{
+    filter: brightness(103%);
+    transform: translateY(-0.5px);
+    box-shadow: 2px 2px 12px #757272,
+                -2px -2px 12px rgba(255,255,255,0.9);
+}
+
+button:active{
+    transform: translateY(0.5px);
+    box-shadow: inset -3px -3px 8px rgba(49, 49, 49, 0.5);
+}
+
+.twitter-btn{
+    padding: 0.5em 0.65em;
+}
+
+/* Media Query : Tablet or Smaller */
+
+@media only screen and (max-width: 600px) {
+    
+    body{
+        background-size: 12.5%;
+    }
+
+    .quote-container{
+        padding: 3rem 1.5rem 3rem;
+    }
+
+    .button-container{
+        flex-direction: column;
+        align-items: center;
+        flex-basis: auto;
+
+    }
+
+    .twitter-btn{
+        margin-top: 1rem;
+        order: 2;
+    }
+}
