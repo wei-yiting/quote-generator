@@ -28,7 +28,6 @@ function newQuote() {
         quoteText.classList.remove('long-quote')
     }
     quoteText.innerText = quote.text;
-
 }
 
 
@@ -69,16 +68,8 @@ const shareFaceBook = function () {
         display: 'popup',
         method: 'share',
         href: 'https://wei-yiting.github.io/quote-generator/.',
+        quote: `${quoteText.innerText} \n- ${authorText.innerText}`,
     }, function (response) { });
 };
 
 fbShareBtn.addEventListener('click', shareFaceBook);
-
-
-
-
-
-
-
-
-
