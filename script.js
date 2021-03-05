@@ -6,7 +6,7 @@ let apiQuotes = [];
 // DOM selection
 const quoteText = document.querySelector('#quote-content');
 const authorText = document.querySelector('#author')
-const twitterBtn = document.querySelector('#twitter');
+const fbShareBtn = document.querySelector('#facebook');
 const newQuoteBtn = document.querySelector('#new-quote');
 
 
@@ -54,6 +54,28 @@ newQuoteBtn.addEventListener('click', newQuote);
 
 
 //  ====== share quote to facebook =====
+
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '373400220516632',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v10.0'
+    });
+};
+
+const shareFaceBook = function () {
+    FB.ui({
+        display: 'popup',
+        method: 'share',
+        href: 'https://wei-yiting.github.io/quote-generator/.',
+    }, function (response) { });
+};
+
+fbShareBtn.addEventListener('click', shareFaceBook);
+
+
+
 
 
 
