@@ -22,7 +22,7 @@ function newQuote() {
         authorText.innerText = quote.author;
     }
     // check quote length and determine font-size
-    if (quote.text.length > 100) {
+    if (quote.text.length > 80) {
         quoteText.classList.add('long-quote')
     } else {
         quoteText.classList.remove('long-quote')

@@ -63,7 +63,7 @@ body{
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 button{
@@ -95,30 +95,55 @@ button:active{
     box-shadow: inset -3px -3px 8px rgba(49, 49, 49, 0.5);
 }
 
-.share-button{
-    padding: 0.5em 0.65em;
+.fa-facebook-f{
+    font-size: 1.5rem;
+}
+
+.share-btn{
+    padding: 0.5em 0.8em;
 }
 
 /* Media Query : Tablet or Smaller */
 
 @media only screen and (max-width: 600px) {
-    
+
+
     body{
+        height: 100vh;
         background-size: 12.5%;
     }
 
     .quote-container{
-        padding: 3rem 1.5rem 3rem;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .quote{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .quote .long-quote{
+        font-size: 1.7rem;
+    }
+    
+    .quote-author{
+        font-size: 1.3rem;
+        text-align: center;
+        margin-top: 3rem;
     }
 
     .button-container{
         flex-direction: column;
         align-items: center;
-        flex-basis: auto;
+        margin-bottom: 1rem;
     }
 
-    .share-button{
-        margin-top: 1rem;
+    .share-btn{
+        margin-top: 1.5rem;
         order: 2;
     }
 }
