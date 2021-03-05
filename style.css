@@ -44,6 +44,7 @@ body{
 
 .quote{
     font-family: 'Courgette', cursive;
+    text-align: left;
     font-size: 2.5rem;
 }
 
@@ -52,10 +53,11 @@ body{
 }
 
 .quote-author{
-    margin: 1rem 0 2rem ;
+    margin: 1rem 3rem 2rem ;
     font-size: 1.4rem;
     font-weight: 600;
-}
+    text-align: right;
+} 
 
 .button-container{
     display: flex;
@@ -93,7 +95,7 @@ button:active{
     box-shadow: inset -3px -3px 8px rgba(49, 49, 49, 0.5);
 }
 
-.twitter-btn{
+.share-button{
     padding: 0.5em 0.65em;
 }
 
@@ -113,10 +115,9 @@ button:active{
         flex-direction: column;
         align-items: center;
         flex-basis: auto;
-
     }
 
-    .twitter-btn{
+    .share-button{
         margin-top: 1rem;
         order: 2;
     }
