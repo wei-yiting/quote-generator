@@ -11,15 +11,15 @@ const fbShareBtn = document.querySelector('#facebook');
 const newQuoteBtn = document.querySelector('#new-quote');
 const loader = document.querySelector('#loader');
 
-// Show Loading
-function loading() {
+
+// ===== load spinner =====
+
+function showLoadingSpinner() {
     loader.hidden = false;
     quoteContainer.hidden = true;
-
 }
 
-// Hide Loading
-function completeLoading() {
+function removeLoadingSpinner() {
     quoteContainer.hidden = false;
     loader.hidden = true;
 }
@@ -27,7 +27,7 @@ function completeLoading() {
 // ===== Show New Quote ======
 
 function newQuote() {
-    loading();
+    showLoadingSpinner();
     // pick a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     // check if author field is blank and replace it with unkown
@@ -44,21 +44,31 @@ function newQuote() {
     }
     // Set Quote, Hide Loader
     quoteText.innerText = quote.text;
-    completeLoading();
+    removeLoadingSpinner();
 }
 
 
 // ====== get quote from API ======
 
+let errorCount = 0;
 async function getQuote() {
-    loading();
+    showLoadingSpinner();
     const apiURL = 'https://type.fit/api/quotes'
     try {
         const response = await fetch(apiURL);
         apiQuotes = await response.json();
         return newQuote();
     } catch (error) {
-        // catch error Here
+        errorCount++;
+        if (errorCount < 10) {
+            getQuote();
+        } else {
+            removeLoadingSpinner();
+            fbShareBtn.setAttribute('disabled', null);
+            newQuoteBtn.setAttribute('disabled', null);
+            quoteContainer.classList.add('error-msg');
+            quoteText.innerText = "Sorry, we are unable to show you a quote right now ...";
+        }
     }
 }
 
