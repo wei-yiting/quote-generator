@@ -179,6 +179,7 @@ button:active{
     .quote-container{
         width:90%;
         margin: 0 5vw;
+        height: auto;
         min-height: 70vh;
         display: flex;
         flex-direction: column;
@@ -195,7 +196,7 @@ button:active{
         font-size: 1.3rem;
     }
     
-    .qutoe .extreme-long-quote{
+    .quote .extreme-long-quote{
         font-size: 1.15rem;
     }
     .quote-author{
@@ -208,6 +209,10 @@ button:active{
         flex-direction: column;
         align-items: center;
         margin-bottom: 1rem;
+    }
+
+    button{
+        font-size: 1.15rem;
     }
 
     .share-btn{
