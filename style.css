@@ -26,15 +26,28 @@ body{
 }
 
 .quote-container{
-    width: auto;
-    max-width: 700px;
-    margin: 5vw;
-    padding: 5rem 3rem 3rem;
+    width: 55%;
+    max-width: 900px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 5rem;
     background-color: #efefee;
     box-shadow: 6px 6px 16px #d1cdce83, -6px -6px 16px rgba(255,255,255,0.7);
     border: rgba(41, 18, 18, 0.5);
     border-radius: 20px;
+}
 
+.quote-container.hide{
+    display: none;
+}
+
+.quote-text{
+    flex: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .fa-quote-left{
@@ -46,11 +59,16 @@ body{
 .quote{
     font-family: 'Courgette', cursive;
     text-align: left;
-    font-size: 2.25rem;
+    font-size: 2.3rem;
+    line-height: 1.35em;
 }
 
 .quote .long-quote{
     font-size: 2rem;
+}
+
+.quote .extreme-long-quote{
+    font-size: 1.8rem;
 }
 
 .quote-author{
@@ -154,12 +172,14 @@ button:active{
 
 
     body{
-        height: 100vh;
+        height: calc(100%);
         background-size: 12.5%;
     }
 
     .quote-container{
-        height: 60vh;
+        width:90%;
+        margin: 0 5vw;
+        min-height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -175,6 +195,9 @@ button:active{
         font-size: 1.7rem;
     }
     
+    .qutoe .extreme-long-quote{
+        font-size: 1.35rem;
+    }
     .quote-author{
         font-size: 1.3rem;
         text-align: center;

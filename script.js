@@ -16,11 +16,13 @@ const loader = document.querySelector('#loader');
 
 function showLoadingSpinner() {
     loader.hidden = false;
+    quoteContainer.classList.add('hide');
     quoteContainer.hidden = true;
 }
 
 function removeLoadingSpinner() {
     quoteContainer.hidden = false;
+    quoteContainer.classList.remove('hide');
     loader.hidden = true;
 }
 
@@ -37,10 +39,14 @@ function newQuote() {
         authorText.innerText = `- ${quote.author}`;
     }
     // check quote length and determine font-size
-    if (quote.text.length > 80) {
-        quoteText.classList.add('long-quote')
+    if (quote.text.length > 140) {
+        quoteText.classList.add('extreme-long-quote');
+    } else if (quote.text.length > 80) {
+        quoteText.classList.add('long-quote');
     } else {
-        quoteText.classList.remove('long-quote')
+        quoteText.classList.remove('long-quote');
+        quoteText.classList.remove('extreme-long-quote');
+
     }
     // Set Quote, Hide Loader
     quoteText.innerText = quote.text;
