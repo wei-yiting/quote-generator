@@ -188,18 +188,18 @@ button:active{
 
     .quote{
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .quote .long-quote{
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
     
     .qutoe .extreme-long-quote{
-        font-size: 1.35rem;
+        font-size: 1.15rem;
     }
     .quote-author{
-        font-size: 1.3rem;
+        font-size: 1rem;
         text-align: center;
         margin-top: 3rem;
     }
