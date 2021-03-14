@@ -83,11 +83,6 @@ async function getQuote() {
 getQuote();
 
 
-// event listener
-newQuoteBtn.addEventListener('click', newQuote);
-fbShareBtn.addEventListener('click', shareFaceBook);
-
-
 //  ====== share quote to facebook =====
 
 window.fbAsyncInit = function () {
@@ -107,3 +102,8 @@ const shareFaceBook = function () {
         quote: `${quoteText.innerText} \n- ${authorText.innerText}`,
     }, function (response) { });
 };
+
+
+// event listener
+newQuoteBtn.addEventListener('click', newQuote);
+fbShareBtn.addEventListener('click', shareFaceBook);
